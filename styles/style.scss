@@ -1,0 +1,106 @@
+@use './theme-variables.scss' as variables;
+@use "sass:map";
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    > section:not(section:first-child) {
+        margin-left: 217px;
+        margin-right: 217px;
+        width: auto;
+
+        h2 {
+            @include variables.title;
+        }
+    }
+}
+
+#hero-section {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+#title-section {
+    > p:first-child {
+        @include variables.sub-title;
+        color: variables.$accent-color;
+        margin-bottom: 0.6rem;
+    }
+
+    h1 {
+        @include variables.big-title;
+        margin-bottom: 1.9rem;
+    }
+
+    > p:not(:first-child) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.4rem;
+    }
+}
+
+#plan-section {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+
+    > section:first-child {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    > section:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        > section {
+            column-count: 2;
+
+            > section {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                margin-bottom: 10px;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 29px;
+                    color: variables.$accent-color;
+                    margin-bottom: 10px;
+                }
+    
+                .map-list-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    > section {
+                        display: flex;
+
+                        p {
+                            @include variables.text;
+
+                            &:first-child {
+                                width: 2rem;
+                                color: variables.$accent-color;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

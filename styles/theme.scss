@@ -1,0 +1,67 @@
+@use './theme-variables.scss' as variables;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, h1, h2 {
+    color: variables.$black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    width: 100%;
+    position:fixed;
+    top: 0px;
+
+    background-color: white;
+
+    > a {
+        width: 89px;
+        img {
+            width: 100%;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        a {
+            color: variables.$black;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+}
+
+.action-button {
+    background-color: variables.$accent-color;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
