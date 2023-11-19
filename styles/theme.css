@@ -56,6 +56,11 @@ header > section:first-child {
     padding: 0.4rem 3rem;
   }
 }
+@media (max-width: 575.98px) {
+  header > section:first-child {
+    padding: 0.4rem 1rem;
+  }
+}
 header > section:first-child > a {
   width: 5.5rem;
 }

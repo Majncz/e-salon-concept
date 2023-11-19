@@ -50,6 +50,10 @@ header {
         @include variables.breakpoint(md, max) {
             padding: 0.4rem 3rem;
         }
+
+        @include variables.breakpoint(sm, max) {
+            padding: 0.4rem 1rem;
+        }
     
         width: 100%;
     

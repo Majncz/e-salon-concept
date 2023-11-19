@@ -10,6 +10,7 @@ main {
 
     @include variables.breakpoint(md, max) {
         gap: 3rem;
+        padding-bottom: 3rem;
     }
 
     > section:not(section:first-child) {
@@ -25,9 +26,17 @@ main {
 
 #hero-section {
     width: 100%;
+    aspect-ratio: 16/12;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 
     img {
         width: 100%;
+
+        @include variables.breakpoint(sm, max) {
+            width: 150%;
+        }
     }
 }
 
@@ -126,6 +135,10 @@ main {
         display: flex;
         gap: 1.25rem;
         @include variables.text;
+
+        p:first-child {
+            color: variables.$accent-color;
+        }
     }
 
     > section:nth-child(3) {

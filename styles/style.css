@@ -8,6 +8,7 @@ main {
 @media (max-width: 767.98px) {
   main {
     gap: 3rem;
+    padding-bottom: 3rem;
   }
 }
 main > section:not(section:first-child) {
@@ -27,9 +28,18 @@ main > section:not(section:first-child) h2 {
 
 #hero-section {
   width: 100%;
+  aspect-ratio: 16/12;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 #hero-section img {
   width: 100%;
+}
+@media (max-width: 575.98px) {
+  #hero-section img {
+    width: 150%;
+  }
 }
 
 #title-section > p:first-child {
@@ -131,6 +141,9 @@ main > section:not(section:first-child) h2 {
   #program-section > section:nth-child(2) {
     font-size: 0.9rem;
   }
+}
+#program-section > section:nth-child(2) p:first-child {
+  color: #009FE3;
 }
 #program-section > section:nth-child(3) article {
   padding: 1.25rem 1.8rem;
