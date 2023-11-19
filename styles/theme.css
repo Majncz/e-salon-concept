@@ -22,7 +22,23 @@ p, a {
   font-size: 1rem;
 }
 
+button.no-style {
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+
 header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+header nav a {
+  color: #3a3a3a;
+  font-weight: 500;
+  font-size: 1rem;
+}
+header > section:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,26 +47,58 @@ header {
   padding-left: 4rem;
   padding-right: 4rem;
   width: 100%;
-  position: fixed;
-  top: 0px;
   background-color: white;
 }
-header > a {
+header > section:first-child > a {
   width: 5.5rem;
 }
-header > a img {
+header > section:first-child > a img {
   width: 100%;
 }
-header nav {
+header > section:first-child nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
-header nav a {
-  color: #3a3a3a;
-  font-weight: 500;
-  font-size: 1rem;
+@media (max-width: 1199.98px) {
+  header > section:first-child nav {
+    display: none;
+  }
+}
+header > section:first-child > section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 3rem;
+}
+header > section:first-child > section button:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  header > section:first-child > section button:first-child {
+    display: none;
+  }
+}
+header > section:first-child > section button:first-child img {
+  height: 1.5rem;
+}
+header > section:nth-child(2) {
+  background-color: #F2F2F2;
+  padding: 2rem 0px;
+}
+header > section:nth-child(2) nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+main {
+  margin-top: 3rem;
 }
 
 .action-button {

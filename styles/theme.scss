@@ -23,41 +23,94 @@ p, a {
     @include variables.text;
 }
 
+button.no-style {
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding-top: 1.1rem;
-    padding-bottom: 1.1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-
     width: 100%;
-    position:fixed;
+    position: fixed;
     top: 0px;
 
-    background-color: white;
-
-    > a {
-        width: 5.5rem;
-        img {
-            width: 100%;
-        }
+    nav a {
+        color: variables.$black;
+        font-weight: 500;
+        font-size: 1rem;
     }
 
-    nav {
+    > section:first-child {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 3rem;
+    
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    
+        width: 100%;
+    
+        background-color: white;
 
-        a {
-            color: variables.$black;
-            font-weight: 500;
-            font-size: 1rem;
+        > a {
+            width: 5.5rem;
+            img {
+                width: 100%;
+            }
+        }
+    
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+    
+            @include variables.breakpoint(xl, max) {
+                display: none;
+            }
+        }
+    
+        > section {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 3rem;
+    
+            button:first-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                @include variables.breakpoint(xl) {
+                    display: none;
+                }
+                
+                img {
+                    height: 1.5rem;
+                }
+            }
         }
     }
+
+    > section:nth-child(2) {
+        background-color: variables.$light-gray;
+
+        padding: 2rem 0px;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+    }
+}
+
+main {
+    margin-top: 3rem;
 }
 
 .action-button {

@@ -6,11 +6,12 @@ main {
     flex-direction: column;
     gap: 9.3rem;
     padding-bottom: 9.3rem;
+    align-items: center;
 
     > section:not(section:first-child) {
         margin-left: 13.5rem;
         margin-right: 13.5rem;
-        width: auto;
+        width: 85%;
 
         h2 {
             @include variables.title;
@@ -132,7 +133,9 @@ main {
 
             section {
                 display: flex;
-                gap: 2.5rem;
+                flex-wrap: wrap;
+                column-gap: 2.5rem;
+                row-gap: 0.6rem;
 
                 p:first-child {
                     color: variables.$accent-color;
@@ -155,6 +158,12 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 4.3rem;
+
+        @include variables.breakpoint(md, max) {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
 
         article {
             background-color: variables.$light-gray;
