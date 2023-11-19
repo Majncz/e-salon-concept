@@ -45,10 +45,11 @@ header {
         justify-content: space-between;
         align-items: center;
     
-        padding-top: 1.1rem;
-        padding-bottom: 1.1rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding: 1.1rem 4rem;
+
+        @include variables.breakpoint(md, max) {
+            padding: 0.4rem 3rem;
+        }
     
         width: 100%;
     
@@ -111,6 +112,9 @@ header {
 
 main {
     margin-top: 3rem;
+    @include variables.breakpoint(md, max) {
+        margin-top: 2rem;
+    }
 }
 
 .action-button {
