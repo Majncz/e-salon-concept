@@ -1,22 +1,23 @@
 $accent-color: #009FE3;
 $black: #3a3a3a;
+$light-gray: #F2F2F2;
 
 @mixin text {
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 @mixin sub-title {
-    font-weight: 600;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 @mixin big-title {
     font-weight: 800;
-    font-size: 58px;
+    font-size: 3.6rem;
 }
 
 @mixin title {
-    font-size: 39px;
+    font-size: 2.4rem;
     font-weight: 700;
 }

@@ -1,15 +1,16 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 9.3rem;
+  padding-bottom: 9.3rem;
 }
 main > section:not(section:first-child) {
-  margin-left: 217px;
-  margin-right: 217px;
+  margin-left: 13.5rem;
+  margin-right: 13.5rem;
   width: auto;
 }
 main > section:not(section:first-child) h2 {
-  font-size: 39px;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
@@ -21,26 +22,26 @@ main > section:not(section:first-child) h2 {
 }
 
 #title-section > p:first-child {
-  font-weight: 600;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 1.3rem;
   color: #009FE3;
   margin-bottom: 0.6rem;
 }
 #title-section h1 {
   font-weight: 800;
-  font-size: 58px;
+  font-size: 3.6rem;
   margin-bottom: 1.9rem;
 }
 #title-section > p:not(:first-child) {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 1.4rem;
 }
 
 #plan-section {
   display: flex;
   flex-direction: column;
-  gap: 85px;
+  gap: 5.3rem;
 }
 #plan-section > section:first-child {
   width: 100%;
@@ -51,7 +52,7 @@ main > section:not(section:first-child) h2 {
 #plan-section > section:not(:first-child) {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.2rem;
 }
 #plan-section > section:not(:first-child) > section {
   -moz-column-count: 2;
@@ -60,26 +61,22 @@ main > section:not(section:first-child) h2 {
 #plan-section > section:not(:first-child) > section > section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 #plan-section > section:not(:first-child) > section > section h3 {
   font-weight: 500;
-  font-size: 29px;
+  font-size: 1.8rem;
   color: #009FE3;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 #plan-section > section:not(:first-child) > section > section .map-list-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.6rem;
 }
 #plan-section > section:not(:first-child) > section > section .map-list-group > section {
   display: flex;
-}
-#plan-section > section:not(:first-child) > section > section .map-list-group > section p {
-  font-weight: 500;
-  font-size: 15px;
 }
 #plan-section > section:not(:first-child) > section > section .map-list-group > section p:first-child {
   width: 2rem;
@@ -87,4 +84,114 @@ main > section:not(section:first-child) h2 {
 }
 #plan-section > section:not(:first-child) > section > section .map-list-group > section p:hover {
   cursor: pointer;
+}
+
+#program-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+#program-section h2 {
+  margin-bottom: 0.6rem;
+}
+#program-section > section:nth-child(2) {
+  display: flex;
+  gap: 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+#program-section > section:nth-child(3) article {
+  padding: 1.25rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+#program-section > section:nth-child(3) article h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+#program-section > section:nth-child(3) article section {
+  display: flex;
+  gap: 2.5rem;
+}
+#program-section > section:nth-child(3) article section p:first-child {
+  color: #009FE3;
+}
+#program-section > section:nth-child(3) article:nth-child(2n+1) {
+  background-color: #F2F2F2;
+}
+
+#past-years-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+#past-years-section > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4.3rem;
+}
+#past-years-section > section article {
+  background-color: #F2F2F2;
+}
+#past-years-section > section article div {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#past-years-section > section article section {
+  width: 100%;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+#past-years-section > section article section h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+#past-years-section > section article:hover {
+  cursor: pointer;
+}
+
+#visitors-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+#visitors-section h2 {
+  margin-bottom: 1.2rem;
+}
+#visitors-section h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+#visitors-section > section:nth-child(2) section {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: auto auto auto auto;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 0.6rem;
+}
+#visitors-section > section:nth-child(2) section p:nth-child(2n) {
+  color: #009FE3;
+}
+#visitors-section > section:nth-child(3) a {
+  color: #3a3a3a;
+}
+#visitors-section > section:nth-child(4) a {
+  color: #009FE3;
+}
+#visitors-section > section:nth-child(4) section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+#visitors-section > section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

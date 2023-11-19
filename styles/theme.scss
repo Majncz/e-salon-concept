@@ -19,15 +19,19 @@ p, h1, h2 {
     color: variables.$black;
 }
 
+p, a {
+    @include variables.text;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 65px;
-    padding-right: 65px;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
     width: 100%;
     position:fixed;
@@ -36,7 +40,7 @@ header {
     background-color: white;
 
     > a {
-        width: 89px;
+        width: 5.5rem;
         img {
             width: 100%;
         }
@@ -59,9 +63,54 @@ header {
 .action-button {
     background-color: variables.$accent-color;
     color: white;
-    padding: 8px 12px;
-    border-radius: 10px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.6rem;
     border: none;
     font-weight: 500;
     font-size: 1rem;
+}
+
+footer {
+    background-color: variables.$light-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5.6rem;
+
+    padding: 2.5rem;
+
+    h3 {
+        @include variables.sub-title;
+    }
+
+    a {
+        color: variables.$accent-color;
+    }
+
+    > section:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+    }
+
+    > section:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+
+        p:last-child {
+            color: #A4A4A4;
+            font-size: 0.9rem;
+        }
+    }
 }

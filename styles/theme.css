@@ -17,21 +17,26 @@ p, h1, h2 {
   color: #3a3a3a;
 }
 
+p, a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   width: 100%;
   position: fixed;
   top: 0px;
   background-color: white;
 }
 header > a {
-  width: 89px;
+  width: 5.5rem;
 }
 header > a img {
   width: 100%;
@@ -51,9 +56,48 @@ header nav a {
 .action-button {
   background-color: #009FE3;
   color: white;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.6rem;
   border: none;
   font-weight: 500;
   font-size: 1rem;
+}
+
+footer {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5.6rem;
+  padding: 2.5rem;
+}
+footer h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+footer a {
+  color: #009FE3;
+}
+footer > section:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+footer > section:nth-child(1) ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+footer > section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+footer > section:nth-child(2) p:last-child {
+  color: #A4A4A4;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=theme.css.map */

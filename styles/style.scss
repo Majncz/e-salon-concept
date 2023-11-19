@@ -4,11 +4,12 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 9.3rem;
+    padding-bottom: 9.3rem;
 
     > section:not(section:first-child) {
-        margin-left: 217px;
-        margin-right: 217px;
+        margin-left: 13.5rem;
+        margin-right: 13.5rem;
         width: auto;
 
         h2 {
@@ -39,7 +40,7 @@ main {
 
     > p:not(:first-child) {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.1rem;
         line-height: 1.4rem;
     }
 }
@@ -47,7 +48,7 @@ main {
 #plan-section {
     display: flex;
     flex-direction: column;
-    gap: 85px;
+    gap: 5.3rem;
 
     > section:first-child {
         width: 100%;
@@ -59,7 +60,7 @@ main {
     > section:not(:first-child) {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.2rem;
 
         > section {
             column-count: 2;
@@ -67,28 +68,26 @@ main {
             > section {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.6rem;
 
-                margin-bottom: 10px;
+                margin-bottom: 0.6rem;
 
                 h3 {
                     font-weight: 500;
-                    font-size: 29px;
+                    font-size: 1.8rem;
                     color: variables.$accent-color;
-                    margin-bottom: 10px;
+                    margin-bottom: 0.6rem;
                 }
     
                 .map-list-group {
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
+                    gap: 0.6rem;
 
                     > section {
                         display: flex;
 
                         p {
-                            @include variables.text;
-
                             &:first-child {
                                 width: 2rem;
                                 color: variables.$accent-color;
@@ -102,5 +101,137 @@ main {
                 }
             }
         }
+    }
+}
+
+#program-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    
+    h2 {
+        margin-bottom: 0.6rem;
+    }
+
+    > section:nth-child(2) {
+        display: flex;
+        gap: 1.25rem;
+        @include variables.text;
+    }
+
+    > section:nth-child(3) {
+        article {
+            padding: 1.25rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            h3 {
+                @include variables.sub-title;
+            }
+
+            section {
+                display: flex;
+                gap: 2.5rem;
+
+                p:first-child {
+                    color: variables.$accent-color;
+                }
+            }
+
+            &:nth-child(2n + 1) {
+                background-color: variables.$light-gray;
+            }
+        }
+    }
+}
+
+#past-years-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    > section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4.3rem;
+
+        article {
+            background-color: variables.$light-gray;
+
+            div {
+                width: 100%;
+                aspect-ratio: 16/9;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            section {
+                width: 100%;
+                padding: 1.8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                h3 {
+                    @include variables.sub-title;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#visitors-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    h2 {
+        margin-bottom: 1.2rem;
+    }
+
+    h3 {
+        @include variables.sub-title;
+    }
+
+    > section:nth-child(2) {
+        section {
+            display: grid;
+            grid-template-columns: min-content auto;
+            grid-template-rows: auto auto auto auto;
+            column-gap: 2rem;
+            row-gap: 0.6rem;
+
+            p:nth-child(2n) {
+                color: variables.$accent-color;
+            }
+        }
+    }
+
+    > section:nth-child(3) a {
+        color: variables.$black;
+    }
+
+    > section:nth-child(4) {
+        a {
+            color: variables.$accent-color;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+    }
+
+    > section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
     }
 }
