@@ -17,6 +17,7 @@ main {
         margin-left: 13.5rem;
         margin-right: 13.5rem;
         width: 85%;
+        max-width: 1400px;
 
         h2 {
             @include variables.title;
@@ -26,10 +27,13 @@ main {
 
 #hero-section {
     width: 100%;
-    aspect-ratio: 16/12;
     display: flex;
     justify-content: center;
     overflow: hidden;
+
+    @include variables.breakpoint(sm, max) {
+        aspect-ratio: 16/12;
+    }
 
     img {
         width: 100%;
