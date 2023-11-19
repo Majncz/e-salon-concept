@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-p, h1, h2 {
+p, h1, h2, li {
   color: #3a3a3a;
 }
 
@@ -78,6 +78,11 @@ header > section:first-child > section {
   flex-direction: row-reverse;
   align-items: center;
   gap: 3rem;
+}
+@media (max-width: 767.98px) {
+  header > section:first-child > section {
+    gap: 1.5rem;
+  }
 }
 header > section:first-child > section button:first-child {
   display: flex;
@@ -156,13 +161,28 @@ footer > section:nth-child(1) ul {
   align-items: center;
   gap: 0.6rem;
 }
+footer > section:nth-child(1) ul li {
+  font-weight: 400;
+  font-size: 1rem;
+}
+@media (max-width: 767.98px) {
+  footer > section:nth-child(1) ul li {
+    font-size: 0.9rem;
+  }
+}
 footer > section:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
+  text-align: center;
 }
 footer > section:nth-child(2) p:last-child {
   color: #A4A4A4;
   font-size: 0.9rem;
+}
+@media (max-width: 767.98px) {
+  footer > section:nth-child(2) p:last-child {
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=theme.css.map */

@@ -5,6 +5,11 @@ main {
   padding-bottom: 9.3rem;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  main {
+    gap: 3rem;
+  }
+}
 main > section:not(section:first-child) {
   margin-left: 13.5rem;
   margin-right: 13.5rem;
@@ -74,17 +79,23 @@ main > section:not(section:first-child) h2 {
   -moz-column-count: 2;
        column-count: 2;
 }
+@media (max-width: 767.98px) {
+  #plan-section > section:not(:first-child) > section {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
 #plan-section > section:not(:first-child) > section > section {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
 }
 #plan-section > section:not(:first-child) > section > section h3 {
   font-weight: 500;
   font-size: 1.8rem;
   color: #009FE3;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
 }
 #plan-section > section:not(:first-child) > section > section .map-list-group {
   display: flex;

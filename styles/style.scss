@@ -8,6 +8,10 @@ main {
     padding-bottom: 9.3rem;
     align-items: center;
 
+    @include variables.breakpoint(md, max) {
+        gap: 3rem;
+    }
+
     > section:not(section:first-child) {
         margin-left: 13.5rem;
         margin-right: 13.5rem;
@@ -66,18 +70,22 @@ main {
         > section {
             column-count: 2;
 
+            @include variables.breakpoint(md, max) {
+                column-count: 1;
+            }
+
             > section {
                 display: flex;
                 flex-direction: column;
                 gap: 0.6rem;
 
-                margin-bottom: 0.6rem;
+                margin-bottom: 1rem;
 
                 h3 {
                     font-weight: 500;
                     font-size: 1.8rem;
                     color: variables.$accent-color;
-                    margin-bottom: 0.6rem;
+                    margin-bottom: 0.3rem;
                 }
     
                 .map-list-group {

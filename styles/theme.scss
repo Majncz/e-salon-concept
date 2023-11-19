@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-p, h1, h2 {
+p, h1, h2, li {
     color: variables.$black;
 }
 
@@ -78,6 +78,10 @@ header {
             flex-direction: row-reverse;
             align-items: center;
             gap: 3rem;
+
+            @include variables.breakpoint(md, max) {
+                gap: 1.5rem;
+            }
     
             button:first-child {
                 display: flex;
@@ -156,6 +160,10 @@ footer {
             flex-direction: column;
             align-items: center;
             gap: 0.6rem;
+
+            li {
+                @include variables.text;
+            }
         }
     }
 
@@ -164,10 +172,15 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 0.6rem;
+        text-align: center;
 
         p:last-child {
             color: #A4A4A4;
             font-size: 0.9rem;
+
+            @include variables.breakpoint(md, max) {
+                font-size: 0.6rem;
+            }
         }
     }
 }
