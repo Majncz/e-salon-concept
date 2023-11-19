@@ -140,6 +140,10 @@ main {
         gap: 1.25rem;
         @include variables.text;
 
+        p:hover {
+            cursor: pointer;
+        }
+
         p:first-child {
             color: variables.$accent-color;
         }

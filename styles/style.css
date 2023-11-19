@@ -147,6 +147,9 @@ main > section:not(section:first-child) h2 {
     font-size: 0.9rem;
   }
 }
+#program-section > section:nth-child(2) p:hover {
+  cursor: pointer;
+}
 #program-section > section:nth-child(2) p:first-child {
   color: #009FE3;
 }
